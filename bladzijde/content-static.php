@@ -12,11 +12,10 @@
 	<?php endif; ?>	
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="front-page-wrap clear">
-				<header class="entry-header static-page-title">
-					<?php the_title( '<h1 id="call-to-action-title">', '</h1>' ); ?>
-				</header><!-- .entry-header -->
-
 				<div class="call-to-action-content big-text clear">
+					<header class="entry-header static-page-title">
+						<?php the_title( '<h1 id="call-to-action-title">', '</h1>' ); ?>
+					</header><!-- .entry-header -->
 					<?php 
 
 						if ( has_post_thumbnail() ) :  ?>

@@ -4,7 +4,7 @@ Theme URI:
 Author: Laurie Skelton
 Author URI: 
 Description: Bladzijde is a flexible template theme for informational websites about campaigns or products. This version has been formatted for Code For NL.
-Version: 2.0
+Version: 3.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bladzijde
@@ -1181,9 +1181,7 @@ input[type="search"] {
 	margin: 0 auto;
 	width: 30%;
 	text-align: center;
-	position: absolute;
-	top: 34%;
-	left: 33%;
+	position: relative;
 }
 
 #call-to-action-title {
