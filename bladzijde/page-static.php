@@ -121,6 +121,7 @@ get_header(); ?>
 							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 								<div class="clear">
 									<?php the_content(); ?>
+									<?php if( function_exists( "get_testimonial_slider_recent" ) ){ get_testimonial_slider_recent( $set="1") ;}?>
 								</div>
 							</article>
 						</div><!-- .entry-content -->

@@ -13,13 +13,14 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="front-page-wrap clear">
 				<div class="call-to-action-content big-text clear">
-					<header class="entry-header static-page-title">
-						<?php the_title( '<h1 id="call-to-action-title">', '</h1>' ); ?>
-					</header><!-- .entry-header -->
+
 					<?php 
 
 						if ( has_post_thumbnail() ) :  ?>
 						<?php if ( 'left' == of_get_option( 'example_select', 'left' ) ) { ?>
+					<header class="entry-header static-page-title">
+						<?php the_title( '<h1 id="call-to-action-title">', '</h1>' ); ?>
+					</header><!-- .entry-header -->
 
 					<div class="post-thumbnail  <?php echo of_get_option( 'example_select', 'left' ); ?>">
 						<?php the_post_thumbnail();?>
@@ -38,6 +39,7 @@
 
 						<div class="static-entry-content-thumbnail left">
 							<div class="call-action-overlay">
+
 								<?php the_content(); ?>
 							</div>
 						</div><!-- .entry-content -->
@@ -47,6 +49,9 @@
 
 					 	<div class="static-entry-content">
 							<div class="call-action-overlay">
+								<header class="entry-header static-page-title">
+									<?php the_title( '<h1 id="call-to-action-title">', '</h1>' ); ?>
+								</header><!-- .entry-header -->
 								<?php the_content(); ?>
 							</div>
 						</div><!-- .entry-content -->
