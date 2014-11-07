@@ -51,6 +51,8 @@ and Blueprint http://www.blueprintcss.org/
 	14.2 Galleries
 	14.3 Featured Images
 	14.4 Short Codes
+	14.5 Logo List
+	14.6 Custom CSS for Join Section
 15.0 Media Queries
 	15.1 Responsive Top Menu
 --------------------------------------------------------------*/
@@ -1401,31 +1403,131 @@ input[type="search"] {
 	margin-top: 76px;
 }
 
+/*  COLORS
+ *   DARK GRAY #A09F9F
+ *	 RED #F15A29
+ *
+ */
+
 /*Color Blocks for Static Front page*/
+
+/* Call to Action */
 .item1 {
 	background-color: #fff;
 }
+
+.item1 a {
+	color: #F15A29;
+}
+
+/* Projectbeschrijving */
 
 .item2 {
 	background-color: #fff;
 }
 
+
+/* Werken Met Fellows */
+
 .item3 {
+	background-color: #ccc;
+	color: #666;
+}
+
+/* Amsterdam */
+.item4 {
+	background-color: #eee;
+}
+
+.item4 a {
+	border-bottom: 1px dotted #74C7A8; 
+}
+
+.item4 a:hover {
+ color: #74C7A8;
+}
+
+/* Helsinki */
+
+.item5 {
 	background-color: #A09F9F;
 	color: #fff;
 }
 
-.item4 {
+.item5 a {
+	border-bottom: 1px dotted #F1B5A1;
+}
+
+.item5 a:hover {
+ color: #F1B5A1;
+}
+
+/* San Fran */
+
+.item6 {
+	background-color: #fff;
+	color: #666;
+}
+
+.item6 a {
+	border-bottom: 1px dotted #F7931E;
+}
+
+.item6 a:hover {
+	color: #F7931E;
+}
+
+/* Contact */
+
+.item7 {
+	background-color: #ccc;
+	color: #666;
+}
+
+#area7 a {
+	color: #fff;
+	border-bottom: 1px dotted #F7931E;
+}
+
+#area7 a:hover {
+	color: #F7931E;
+}
+
+#area7 {
+	background: url('images/code-for-nl-photo.png')no-repeat center center fixed;  
+	background-size: cover;
 	background-color: #ccc;
 }
 
-.item5 {
-	background-color: #ededed;
+#area7 .overlay-for-posts{
+	padding-top: 2em;
+	padding-bottom: 2em;
+	border: 1px solid #666;
+	border-radius: 5px;
+	background: hsla(0, 1%, 20%, .5);
+	color: #fff;
 }
 
-.item6 {
-	background-color: #A09F9F;
-	color: #fff;
+#area7 .entry-header,
+#area7 .category-content-wrap {
+	text-align: center;
+	margin: 0 auto;
+	padding: .25em;
+}
+
+#area7 .category-content-wrap {
+	padding: 2em;
+}
+
+/* Join */
+
+.item8 {
+	background-color: #eee;
+	color: #666;
+}
+
+.item8 a {
+	color: #F15A29;
 }
 
 /*--------------------------------------------------------------
@@ -1817,6 +1919,76 @@ object {
 }
 
 /*--------------------------------------------------------------
+14.5 Logo List Styles
+--------------------------------------------------------------*/
+/* For the logos in the "supported by" section. Depends on wrapping
+ * the logos in a list with the class of "logo-group".
+ */
+
+.logo-group {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+
+.logo-group li {
+	display: inline-block;
+	padding: 1em;
+	width: 25%;
+}
+
+/*--------------------------------------------------------------
+14.6 Custom CSS for Join Section
+--------------------------------------------------------------*/
+/* For the "Join" section. Depends on wrapping content in following strcuture:
+ * 	<div class="container clear">
+ *		<div class="block">
+ *			<div class="block-inner">
+ *				"content"
+ *			</div>
+ *		</div>
+ *	</div>
+ */
+
+ .container {
+ 	margin: 0 auto;
+ 	width: auto;
+ }
+
+ .block {
+ 	vertical-align: top;
+ 	display: inline-block;
+ 	width: 47%;
+ 	margin: 1%;
+ 	min-height: 455px;
+ 	background-color: #fff;
+ 	border-bottom: 5px solid #A2F2D3;
+ }
+
+ .block-inner {
+ 	padding: 1.5em;
+ 	text-align: left;
+ }
+
+ .block-image {
+ 	margin: 0 auto;
+ 	text-align: center;
+ 	padding-top: 1em;
+ 	width: 250px;
+ 	height: 268px;
+ }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: default;
+ }
+
+
+
+/*--------------------------------------------------------------
 15.0 Media Queries
 --------------------------------------------------------------*/
 
@@ -2167,7 +2339,7 @@ object {
 --------------------------------------------------------------*/
 
 
-@media only screen and (min-width: 769px) and (max-width: 1320px) {
+@media only screen and (min-width: 769px) and (max-width: 1120px) {
    /* iPads (portrait and landscape) */
   
 	.front-page-wrap {
@@ -2188,8 +2360,6 @@ object {
 		margin: 0 auto;
 		width: 40%;
 		text-align: center;
-		position: absolute;
-		top: 32%;
 	}
 
 	#call-to-action-title {
@@ -2230,11 +2400,11 @@ object {
 	}
 
 	.category-content h1 {
-		padding-bottom: 10px;
+		padding-bottom: 5px;
 	}
 
 	.post-thumbnail {
-		margin-bottom: .5em;
+		margin-bottom: 1.5em;
 	}
 
 	.static-page-content .post-thumbnail.left {
@@ -2301,6 +2471,50 @@ object {
 	}
 
 
+		/* For the "Join" section. Depends on wrapping content in following strcuture:
+	 * 	<div class="container clear">
+	 *		<div class="block">
+	 *			<div class="block-inner">
+	 *				"content"
+	 *			</div>
+	 *		</div>
+	 *	</div>
+	 */
+
+	 .block {
+	 	vertical-align: top;
+	 	display: block;
+	 	width: auto;
+	 	margin: 0 0 1em 0;
+	 	min-height: 300px;
+	 	max-height: 300px;
+	 	background-color: #fff;
+	 	border-bottom: 5px solid #A2F2D3;
+	 }
+
+	 .block-inner {
+	 	padding: 1em;
+	 	text-align: left;
+	 	display: inline-block;
+	 	width: 70%;
+	 }
+
+	 .block-image {
+	 	margin: 0 auto;
+	 	text-align: left;
+	 	padding: 1em 0 0 1em;
+	 	width: 28%;
+	 	height: 268px;
+	 	display: inline-block;
+	 }
+
+	  .image {
+	    width: 100%;
+	    height: 100%;
+	    position: relative;
+	    cursor: default;
+	 }
+
 
 }
 
@@ -2331,7 +2545,7 @@ object {
 	.static-page-title {
 		margin: 0 auto;
 		position: relative;
-		width: 100%;
+		width: 8block-image0%;
 		top: 0;
 		left: 0;
 	}
@@ -2341,6 +2555,7 @@ object {
 		font-size: 40px;
 		padding: .15em;
 	}
+
 
 	.big-text {
 		font-size: 2rem;
@@ -2449,6 +2664,42 @@ object {
 		margin-top: 10px;
 	  
 	}
+
+			/* For the "Join" section. Depends on wrapping content in following strcuture:
+	 * 	<div class="container clear">
+	 *		<div class="block">
+	 *			<div class="block-inner">
+	 *				"content"
+	 *			</div>
+	 *		</div>
+	 *	</div>
+	 */
+
+	 .block {
+	 	vertical-align: top;
+	 	display: block;
+	 	width: auto;
+	 	margin: 0 0 1em 0;
+	 	min-height: 100px;
+	 	max-height: auto;
+	 	background-color: #fff;
+	 	border-bottom: 5px solid #A2F2D3;
+	 }
+
+	 .block-inner {
+	 	padding: 1em;
+	 	text-align: left;
+	 	display: inline-block;
+	 	width: 100%;
+	 }
+
+	 .block-image {
+	 	display: none;
+	 }
+
+	  .image {
+		display: none;
+	 }
 
     
 }

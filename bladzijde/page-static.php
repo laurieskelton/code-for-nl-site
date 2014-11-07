@@ -83,51 +83,53 @@ get_header(); ?>
 <!-- section id can either begin with #area2 or #area3 depending on whether the fixed scroll image is enabled or not-->
 <section class="static-page-content category-content">
 	<div class="front-page-wrap">
-		<header class="entry-header">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		</header><!-- .entry-header -->
-		<div class="category-content-wrap clear">
-					<?php 
+		<div class="overlay-for-posts">
+				<header class="entry-header">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				</header><!-- .entry-header -->
+				<div class="category-content-wrap clear">
+							<?php 
 
-						if ( has_post_thumbnail() ) :  ?>
+								if ( has_post_thumbnail() ) :  ?>
 
-					<?php if ( 'left' == of_get_option( 'example_select', 'left' ) ) { ?>
+							<?php if ( 'left' == of_get_option( 'example_select', 'left' ) ) { ?>
 
-					<div class="post-thumbnail  <?php echo of_get_option( 'example_select', 'left' ); ?>">
-						<?php the_post_thumbnail();?>
-						</div>
-
-						<div class="static-entry-content-thumbnail right">
-							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<?php the_content(); ?>
-							</article>
-						</div><!-- .entry-content -->
-
-                    <?php } else { ?>
-                      <div class="post-thumbnail right">
-						<?php the_post_thumbnail();?>
-						</div>
-
-						<div class="static-entry-content-thumbnail left">
-							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<?php the_content(); ?>
-							</article>
-						</div><!-- .entry-content -->
-                     <?php } ?><!-- end IF statment Left or Right Alignment -->
-
-					 	<?php else : ?>
-
-					 	<div class="static-entry-content">
-							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<div class="clear">
-									<?php the_content(); ?>
-									<?php if( function_exists( "get_testimonial_slider_recent" ) ){ get_testimonial_slider_recent( $set="1") ;}?>
+							<div class="post-thumbnail  <?php echo of_get_option( 'example_select', 'left' ); ?>">
+								<?php the_post_thumbnail();?>
 								</div>
-							</article>
-						</div><!-- .entry-content -->
-					 	<?php endif; ?> <!-- end IF statment Thumbnail -->
 
-		</div><!-- .category-content-wrap -->
+								<div class="static-entry-content-thumbnail right">
+									<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+										<?php the_content(); ?>
+									</article>
+								</div><!-- .entry-content -->
+
+		                    <?php } else { ?>
+		                      <div class="post-thumbnail right">
+								<?php the_post_thumbnail();?>
+								</div>
+
+								<div class="static-entry-content-thumbnail left">
+									<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+										<?php the_content(); ?>
+									</article>
+								</div><!-- .entry-content -->
+		                     <?php } ?><!-- end IF statment Left or Right Alignment -->
+
+							 	<?php else : ?>
+
+							 	<div class="static-entry-content">
+									<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+										<div class="clear">
+											<?php the_content(); ?>
+											<?php if( function_exists( "get_testimonial_slider_recent" ) ){ get_testimonial_slider_recent( $set="1") ;}?>
+										</div>
+									</article>
+								</div><!-- .entry-content -->
+							 	<?php endif; ?> <!-- end IF statment Thumbnail -->
+
+				</div><!-- .category-content-wrap -->
+		</div><!-- .overlay-for-posts -->
 	</div><!-- .front-page-wrap -->
 </section><!-- .category-content -->
 				
